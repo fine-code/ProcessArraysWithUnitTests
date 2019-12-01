@@ -77,4 +77,15 @@ public class ProccessIntArray {
 		return this.arr.length - 1;
 	}
 	
+	/**
+	 * Get a sum of the elements in the array
+	 * @return int the sum of the elements in the array
+	 */
+	 public int getTotal() {
+	 	int total = 0;
+	 	for (int i = 0; i < this.arr.length; i++) {
+	 		total += this.arr[i];
+	 	}
+	 }
+	
 }

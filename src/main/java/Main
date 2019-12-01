@@ -18,6 +18,8 @@ public class Main {
 		System.out.println("Maximum value in this array: " + arr.getMax());
 		
 		System.out.println("Average of the values in this array: " + arr.getAvg(0);
+		
+		System.out.println("Total of the values in this array: " + arr.getTotal());
 	
 	
 	

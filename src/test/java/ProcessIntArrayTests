@@ -66,6 +66,25 @@ public class ProcessIntArrayTest [
 		Exception exception = assertThrows(Exception, () -> testEmptyArr.getAvg());
 		assertEquals("Cannot get the average value of an empty array", exception.getMessage());
 	}
+	
+	@Test
+	public void getTotalHandlesNegativeNumbers() {
+		int[] testArrWithNegativeNumbers = new int[] {-1,-2,-3,-4,-5};
+		asserEquals(-15, testAvgWithegativeNumbers.getTotal(), "Total should be -15");
+	}
+	
+	@Test 
+	public void getTotalHandlesZero() {
+		int[] testArrWithZero = new int[] {0, -1, 1};
+		assertEquals(0, testArrWithZero.getAvg(), "Total should be 0");
+	}	
+
+	@Test 
+	public void getTotalHandlesEmptyArray() {
+		int[] testEmptyArr = new int[] {};
+		Exception exception = assertThrows(Exception, () -> testEmptyArr.getTotal());
+		assertEquals("Cannot get the sum of values in an empty array", exception.getMessage());
+	}
 
 
 }
