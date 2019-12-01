@@ -1,0 +1,80 @@
+package intArray;
+
+public class ProccessIntArray {
+	
+	//integer array
+	private int[] arr;
+	
+	/***
+	 * Constructor
+	 * @param int[] array
+	 */
+	public ProccessIntArray(int[] array) {
+		this.arr = array;
+	}
+	
+	/**
+	 * Get the Minimum value in the array
+	 * @return int min
+	 */
+	public int getMin() {
+		if (this.arr.length == 0) {
+			return 0;
+		}
+		else {
+			int min = this.arr[0];
+			for (int i=1;i<this.arr.length;i++) {
+				if (this.arr[i] < min) {
+					min = this.arr[i];
+				}
+			}
+			return min;
+		}	 
+	}
+	
+	/**
+	 * Get the Maximum value in the array
+	 * @return int max
+	 */
+	public int getMax() {
+		if (this.arr.length == 0) {
+			return 0;
+		}
+		else {
+			int max = this.arr[0];
+			for (int i=1;i<this.arr.length;i++) {
+				if (this.arr[i] > max) {
+					max = this.arr[i];
+				}
+			}
+			return max;
+		}	 
+	}
+	
+	/**
+	 * Get the Average of the values in the array
+	 * @return int avg
+	 */
+	public int getAvg() {
+		if (this.arr.length == 0) {
+			return 0;
+		}
+		else {
+			int total = this.arr[0];
+			for (int i=1; i<this.arr.length; i++) {
+				total += arr[i];
+			}
+			int avg = total/this.arr.length;
+			return avg;
+		}
+	}
+	
+	/**
+	 * Get a Count of the elements in the array
+	 * @return int the array's length
+	 */
+	public int getCount() {
+		return this.arr.length - 1;
+	}
+	
+}

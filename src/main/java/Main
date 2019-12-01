@@ -1,0 +1,33 @@
+import 
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		int[] arr = new int[] {0, 1, 2, 3, 4, 5};
+		
+		System.out.println("Values in this array: ");
+		for (int i = 0; i < arr.length; i++) {
+			System.out.println(arr[i] + "\t");
+		}
+			
+		System.out.println("Count of values in this array: " + arr.getCount());
+		
+		System.out.println("Minimum value in this array: " + arr.getMin());
+		
+		System.out.println("Maximum value in this array: " + arr.getMax());
+		
+		System.out.println("Average of the values in this array: " + arr.getAvg(0);
+	
+	
+	
+	
+	
+	
+	
+
+
+	}
+
+
+}	

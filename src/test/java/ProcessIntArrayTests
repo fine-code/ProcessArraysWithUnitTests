@@ -1,0 +1,71 @@
+import static org.junit.*;
+
+
+public class ProcessIntArrayTest [
+
+
+	@Test
+	public void countOfEmptyArrayShouldReturnZero() {
+		int[] testEmptyArr = new int[] {};
+		assertEquals(0, testEmptyArr.getCount(), "Count of empty array must be 0");
+	}
+	
+	@Test
+	public void getMinHandlesNegativeNumbers() {
+		int[] testArrWithNegativeNumbers = new int[] {-1,-2,-3,-4,-5};
+		assertEquals(-5, testArrWithNegativeNumbers.getMin(), "-5 should be the minimum");
+	}
+	
+	@Test 
+	public void getMinHandlesZero() {
+		int[] testArrWithZero = new int[] {0, 1, 2, 3, 4, 5};
+		assertEquals(0, testArrWithZero, "Minimum should be 0");
+	}
+	
+	@Test 
+	public void getMinHandlesEmptyArray() {
+		int[] testEmptyArr = new int[] {};
+		Exception exception = assertThrows(Exception, () -> testEmptyArr.getMin());
+		assertEquals("Cannot get the minimum value of an empty array", exception.getMessage());
+	}
+	
+	@Test
+	public void getMaxHandlesNegativeNumbers() {
+		int[] testArrWithNegativeNumbers = new int[] {-1,-2,-3,-4,-5};
+		asserEquals(-1, testArrWithegativeNumbers.getMax(), "Maximum should be -1");
+	}
+	
+	@Test 
+	public void getMaxHandlesZero() {
+		int[] testArrWithZero = new int[] {0,-1,-2,-3,-4,-5};
+		assertEquals(0, testArrWithZero.getMax(), "Maximum should be 0");
+	}
+	
+	@Test 
+	public void getMaxHandlesEmptyArray() {
+		int[] testEmptyArr = new int[] {};
+		Exception exception = assertThrows(Exception, () -> testEmptyArr.getMax());
+		assertEquals("Cannot get the maximum value of an empty array", exception.getMessage());
+	}
+	
+	@Test
+	public void getAvgHandlesNegativeNumbers [
+		int[] testArrWithNegativeNumbers = new int[] {-1,-2,-3,-4,-5};
+		asserEquals(-3, testAvgWithegativeNumbers.getAvg(), "Average should be -3");
+	}
+	
+	@Test 
+	public void getAvgHandlesZero() {
+		int[] testArrWithZero = new int[] {0,-1,-2,-3,-4,-5};
+		assertEquals(-2.5, testArrWithZero.getAvg(), "Average should be -2.5");
+	}	
+
+	@Test 
+	public void getAvgHandlesEmptyArray() {
+		int[] testEmptyArr = new int[] {};
+		Exception exception = assertThrows(Exception, () -> testEmptyArr.getAvg());
+		assertEquals("Cannot get the average value of an empty array", exception.getMessage());
+	}
+
+
+}
